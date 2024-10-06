@@ -1,0 +1,26 @@
+Create
+cd đường_dẫn_đến_project
+git init
+git remote add origin https://github.com/hiepbao/StudentManagement.git
+git add .
+git commit -m "First commit"
+git branch -M main  # Đặt nhánh chính thành main (nếu bạn đang tạo mới)
+git push -u origin main
+
+Clone
+git clone https://github.com/hiepbao/StudentManagement.git
+
+Push Main
+cd repository
+git status
+git add .
+git commit -m "Đã cập nhật một số thay đổi"
+git push origin main
+
+
+
+
+
+
+
+
