@@ -1,0 +1,10 @@
+
+
+// ConnectionString
+Data Source=.;Initial Catalog=StudentManagement;Persist Security Info=True;User ID=sa;Password=123;Encrypt=True;Trust Server Certificate=True
+
+// Tạo Models
+Scaffold-DbContext " Data Source=.;Initial Catalog=StudentManagement;Persist Security Info=True;User ID=sa;Password=123;Encrypt=True;Trust Server Certificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -DataAnnotations
+
+// sửa database + sửa model
+Scaffold-DbContext "Data Source=.;Initial Catalog=StudentManagement;Persist Security Info=True;User ID=sa;Password=123;Encrypt=True;Trust Server Certificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Tables ClassDetail, HomeroomTeacher, Users, Class, Diligence, Funtions, Grades, Parents, Roles, Semesters, Student, StudyPoints, Subject, Teachers, UserRole  -Force

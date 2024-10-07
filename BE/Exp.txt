@@ -1,0 +1,29 @@
++ Package
+EntityFrameworkCore 
+EntityFrameworkCore.design
+EntityFrameworkCore.SqlServer
+EntityFrameworkCore.Tools
+
++ Connection
+	- file json
+"ConnectionStrings": {
+  "cnn": "Data Source=.;Initial Catalog=StudentManagement;Persist Security Info=True;User ID=sa;Password=123;Encrypt=True;Trust Server Certificate=True"
+},
+	- Program
+string strcnn = builder.Configuration.GetConnectionString("cnn");
+builder.Services.AddDbContext<StudentManagementContext>(options => options.UseSqlServer(strcnn));
+
+builder.Services.AddControllers().AddJsonOptions(options =>
+{
+    options.JsonSerializerOptions.ReferenceHandler = System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
+});
+
+app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
++ JWT
+	- .json
+"Jwt": {
+  "Key": "MySuperSecretKeyThatIsLongEnoughToMeetSecurityRequirements12345",
+  "Issuer": "StudentManagementAPI",
+  "Audience": "StudentManagementUsers"
+}
