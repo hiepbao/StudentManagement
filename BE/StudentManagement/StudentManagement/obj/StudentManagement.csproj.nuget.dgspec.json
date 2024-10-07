@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\XinViec\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {}
+    "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {}
   },
   "projects": {
-    "D:\\XinViec\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {
+    "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\StudentManagement.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\XinViec\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+        "projectUniqueName": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
         "projectName": "StudentManagement",
-        "projectPath": "D:\\XinViec\\StudentManagement\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
+        "projectPath": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\StudentManagement.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "D:\\XinViec\\StudentManagement\\StudentManagement\\StudentManagement\\obj\\",
+        "outputPath": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
