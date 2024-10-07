@@ -1,26 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\",
+  "WorkspaceRootPath": "D:\\lamviec\\QLHocSinh\\StudentManagement\\BE\\StudentManagement\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|d:\\xinviec\\studentmanagement\\be\\studentmanagement\\studentmanagement\\controllers\\parentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\controllers\\parentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|d:\\lamviec\\qlhocsinh\\studentmanagement\\be\\studentmanagement\\studentmanagement\\controllers\\studypointscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\controllers\\studypointscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|d:\\xinviec\\studentmanagement\\be\\studentmanagement\\studentmanagement\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|d:\\xinviec\\studentmanagement\\be\\studentmanagement\\studentmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|d:\\xinviec\\studentmanagement\\be\\studentmanagement\\studentmanagement\\controllers\\classdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\controllers\\classdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|d:\\xinviec\\studentmanagement\\be\\studentmanagement\\studentmanagement\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\controllers\\studentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|d:\\lamviec\\qlhocsinh\\studentmanagement\\be\\studentmanagement\\studentmanagement\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0988E843-0DE2-44F0-B5E9-55E5281623DB}|StudentManagement\\StudentManagement.csproj|solutionrelative:studentmanagement\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,69 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ParentsController.cs",
-              "DocumentMoniker": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\ParentsController.cs",
-              "RelativeDocumentMoniker": "StudentManagement\\Controllers\\ParentsController.cs",
-              "ToolTip": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\ParentsController.cs",
-              "RelativeToolTip": "StudentManagement\\Controllers\\ParentsController.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAA9wEcAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T07:49:31.954Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "StudentManagement\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "StudentManagement\\Controllers\\AuthController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAABMAAAA",
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "D:\\lamviec\\QLHocSinh\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "StudentManagement\\Controllers\\UsersController.cs",
+              "ToolTip": "D:\\lamviec\\QLHocSinh\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "StudentManagement\\Controllers\\UsersController.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAIwE4AAAA9AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T07:32:12.927Z",
+              "WhenOpened": "2024-10-07T13:38:02.001Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\appsettings.json",
-              "RelativeDocumentMoniker": "StudentManagement\\appsettings.json",
-              "ToolTip": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\appsettings.json",
-              "RelativeToolTip": "StudentManagement\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAADAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-07T07:29:27.25Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "StudentsController.cs",
-              "DocumentMoniker": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\StudentsController.cs",
-              "RelativeDocumentMoniker": "StudentManagement\\Controllers\\StudentsController.cs",
-              "ToolTip": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\StudentsController.cs",
-              "RelativeToolTip": "StudentManagement\\Controllers\\StudentsController.cs",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAcwAAAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "StudyPointsController.cs",
+              "DocumentMoniker": "D:\\lamviec\\QLHocSinh\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\StudyPointsController.cs",
+              "RelativeDocumentMoniker": "StudentManagement\\Controllers\\StudyPointsController.cs",
+              "ToolTip": "D:\\lamviec\\QLHocSinh\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\StudyPointsController.cs",
+              "RelativeToolTip": "StudentManagement\\Controllers\\StudyPointsController.cs",
+              "ViewState": "AQIAAHcAAAAAAAAAAAAuwI0AAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-07T07:22:41.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClassDetailsController.cs",
-              "DocumentMoniker": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\ClassDetailsController.cs",
-              "RelativeDocumentMoniker": "StudentManagement\\Controllers\\ClassDetailsController.cs",
-              "ToolTip": "D:\\XinViec\\StudentManagement\\BE\\StudentManagement\\StudentManagement\\Controllers\\ClassDetailsController.cs",
-              "RelativeToolTip": "StudentManagement\\Controllers\\ClassDetailsController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T13:30:44.705Z"
+              "WhenOpened": "2024-10-07T12:45:39.224Z",
+              "EditorCaption": ""
             }
           ]
         }
