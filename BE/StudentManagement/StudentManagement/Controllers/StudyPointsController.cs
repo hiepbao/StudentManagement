@@ -145,6 +145,7 @@ namespace StudentManagement.Controllers
         [HttpPost("Create")]
         public async Task<ActionResult<StudyPoint>> PostStudyPoint(StudyPoint studyPoint)
         {
+
             _context.StudyPoints.Add(studyPoint);
             await _context.SaveChangesAsync();
 

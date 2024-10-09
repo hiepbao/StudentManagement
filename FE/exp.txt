@@ -1,0 +1,69 @@
+Create project
+npx create-react-app student-management
+Run
+npm start
+
+
+Giải thích chi tiết từng thư mục
+public/
+
+Chứa các tài nguyên tĩnh của dự án như ảnh favicon, file HTML gốc (thường là index.html), và các tệp cần thiết khác mà bạn có thể muốn truy cập trực tiếp từ trình duyệt.
+index.html là nơi file React chính được mount vào.
+src/
+
+Đây là thư mục chứa toàn bộ mã nguồn của ứng dụng React.
+Thư mục bên trong src/
+assets/
+
+Thư mục này chứa các tài nguyên tĩnh như hình ảnh, font chữ, hoặc các tệp CSS chung.
+images/: Chứa các tệp hình ảnh được sử dụng trong toàn bộ ứng dụng.
+styles/: Chứa các file CSS hoặc SCSS dùng chung cho toàn ứng dụng. Bạn có thể tạo nhiều file như global.css hoặc variables.scss cho các biến chung.
+components/
+
+Chứa các component tái sử dụng được trong ứng dụng. Các component ở đây thường là các phần tử UI nhỏ như Button, Input, Card, Modal, Header, Footer, v.v.
+Các component này có thể có thư mục con nếu chúng phức tạp và cần nhiều tệp liên quan (ví dụ: component có logic riêng và style riêng).
+hooks/
+
+Thư mục này chứa các custom hooks mà bạn có thể tạo để tách biệt logic ra khỏi component. Custom hooks thường được sử dụng để tái sử dụng logic phức tạp liên quan đến state và effect.
+Ví dụ: useFetch.js hoặc useAuth.js.
+context/
+
+Dùng để quản lý React Context API, nơi bạn tạo các context để chia sẻ dữ liệu hoặc state giữa các component mà không cần truyền props thông qua nhiều cấp.
+Ví dụ: AuthContext.js hoặc ThemeContext.js.
+pages/
+
+Chứa các component đại diện cho từng trang của ứng dụng như Home, About, Contact, v.v.
+Các trang có thể bao gồm các component lớn hơn hoặc sử dụng nhiều component từ thư mục components/.
+Ví dụ:
+
+pages/
+├── Home.js
+├── About.js
+└── Contact.js
+services/
+
+Thư mục này chứa các tệp logic liên quan đến việc tương tác với API hoặc các dịch vụ bên ngoài (gọi HTTP, xử lý token, xác thực).
+Bạn có thể tạo một tệp api.js để viết các hàm gọi API hoặc chia thành các tệp nhỏ như authService.js, userService.js để tổ chức tốt hơn.
+utils/
+
+Chứa các hàm hoặc tiện ích (utility functions) dùng chung trong toàn bộ ứng dụng.
+Ví dụ: Các hàm định dạng ngày tháng, xử lý chuỗi, hoặc các phép tính chung.
+App.js
+
+Đây là component gốc của ứng dụng React. Bạn thường đặt cấu trúc chính của giao diện người dùng ở đây và kết nối với Router (để điều hướng giữa các trang).
+index.js
+
+Đây là entry point của ứng dụng. File này sẽ gọi ReactDOM.render() để render App.js vào DOM thực tế (trong public/index.html).
+routes.js
+
+Tệp này thường chứa toàn bộ cấu hình của Router (nếu bạn sử dụng React Router). Thay vì khai báo tất cả route trong App.js, bạn có thể tạo một file routes.js để quản lý tất cả các route của dự án.
+Các file khác bên ngoài src/
+.gitignore
+
+Danh sách các file và thư mục mà Git sẽ bỏ qua, không đưa vào hệ thống quản lý mã nguồn. Ví dụ như các thư mục node_modules/, file cấu hình môi trường .env.
+package.json
+
+Chứa thông tin về dự án, các dependencies và scripts cần thiết để chạy và build ứng dụng.
+README.md
+
+File này chứa thông tin cơ bản về dự án, hướng dẫn cài đặt và sử dụng, rất quan trọng nếu bạn làm việc nhóm hoặc chia sẻ dự án.
