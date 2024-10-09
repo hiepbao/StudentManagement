@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function Nav() {
   return (
     <nav className="d-flex align-items-center p-2 bg-light border-bottom">
-      <Link to="/school" className="text-dark text-decoration-none me-4"><FontAwesomeIcon icon={faSchool} className="me-1" />1. Trường học</Link>
+      <Link to="/School" className="text-dark text-decoration-none me-4"><FontAwesomeIcon icon={faSchool} className="me-1" />1. Trường học</Link>
       <Link to="/class" className="text-dark text-decoration-none me-4"><FontAwesomeIcon icon={faUsers} className="me-1" />2. Lớp học</Link>
       <Link to="/staff" className="text-dark text-decoration-none me-4"><FontAwesomeIcon icon={faUsers} className="me-1" />3. Nhân sự</Link>
       <Link to="/students" className="text-dark text-decoration-none me-4"><FontAwesomeIcon icon={faChild} className="me-1" />4. Học sinh</Link>

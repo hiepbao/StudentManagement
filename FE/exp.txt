@@ -3,6 +3,12 @@ npx create-react-app student-management
 Run
 npm start
 
+insert
+npm install react-router-dom
+npm install bootstrap
+npm install @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons @fortawesome/fontawesome-svg-core
+npm install axios
+
 
 Giải thích chi tiết từng thư mục
 public/
