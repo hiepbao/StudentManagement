@@ -44,11 +44,11 @@ function Login() {
 
   return (
     <div className="container-fluid d-flex align-items-center justify-content-center" style={{ minHeight: 'calc(100vh - 150px)' }}>
-      <div className="row w-100 w-md-75">
+      <div className="row">
         <div className="col-12 col-md-6 d-flex align-items-center justify-content-center mb-4 mb-md-0">
-          <img src={image} alt="Database Illustration" className="img-fluid w-75 w-md-100" style={{ borderRadius: '5px' }} />
+          <img src={image} alt="Database Illustration" className="img-fluid  w-md-100" style={{ borderRadius: '5px' }} />
         </div>
-        <div className="col-12 col-md-6 d-flex align-items-center justify-content-center">
+        <div className="col-12 col-md-6 w-50" style={{ height: '100%' }}>
           <div className="card p-4 shadow w-100 mx-auto">
             <form className='w-100 mt-3 mt-md-5' onSubmit={handleLogin}>
               <h3 className="text-center mb-4">Sign In</h3>
