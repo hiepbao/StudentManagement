@@ -2,16 +2,17 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faBell, faQuestionCircle, faTh } from '@fortawesome/free-solid-svg-icons';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import image from '../assets/images/logo.png'; 
 // import '../styles/Header.css';
 
 function Header() {
   return (
     <header className="d-flex align-items-center p-2 bg-primary text-white">
       <div className="d-flex align-items-center me-auto">
-        <img src="/assets/logo.png" alt="Logo" className="me-2" style={{ width: '40px', height: '40px' }} />
+        <img src={image} alt="Logo" className="me-2" style={{ width: '40px', height: '40px' }} />
         <h5 className="mb-0">HCM-EDU</h5>
       </div>
-      <span className="me-auto">TT GDN-GDTX QUẬN</span>
+      
       <div className="d-flex align-items-center">
         <span className="me-3">Quản lý giáo dục </span>
         <FontAwesomeIcon icon={faUser} className="me-3" />
