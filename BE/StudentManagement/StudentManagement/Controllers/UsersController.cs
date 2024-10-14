@@ -20,25 +20,44 @@ namespace StudentManagement.Controllers
             _context = context;
         }
 
-        // GET: api/Users
         [HttpGet("Get")]
         public async Task<ActionResult<IEnumerable<User>>> GetUsers()
         {
-            return await _context.Users.ToListAsync();
+            var users = await _context.Users
+                .Include(u => u.UserRoles)
+                    .ThenInclude(ur => ur.Role)
+                .ToListAsync();
+
+            return users;
         }
 
-        [HttpGet("Get/{id}")]
-        public async Task<ActionResult<User>> GetUser(int id)
+        // GET: api/Users/Search
+        [HttpGet("Search")]
+        public async Task<ActionResult<IEnumerable<User>>> SearchUsers([FromQuery] string? searchTerm)
         {
-            var user = await _context.Users.FindAsync(id);
+            var query = _context.Users
+                .Include(u => u.UserRoles)
+                .ThenInclude(ur => ur.Role)
+                .AsQueryable();
 
-            if (user == null)
+            if (!string.IsNullOrEmpty(searchTerm))
             {
-                return NotFound(new { message = "Không có User này" });
+                query = query.Where(u =>
+                    u.Name.Contains(searchTerm) ||
+                    u.Phone.Contains(searchTerm) ||
+                    u.Mail.Contains(searchTerm));
             }
 
-            return user;
+            var users = await query.ToListAsync();
+
+            if (users == null || users.Count == 0)
+            {
+                return NotFound(new { message = "Không tìm thấy người dùng phù hợp" });
+            }
+
+            return users;
         }
+
 
         [HttpPut("Editfull/{id}")]
         public async Task<IActionResult> PutUser(int id, User user)

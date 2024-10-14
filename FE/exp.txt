@@ -8,6 +8,8 @@ npm install react-router-dom
 npm install bootstrap
 npm install @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons @fortawesome/fontawesome-svg-core
 npm install axios
+npm install react-bootstrap bootstrap 
+npm install react-toastify  
 
 
 Giải thích chi tiết từng thư mục
