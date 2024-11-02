@@ -1,14 +1,19 @@
 import React, { useEffect, useState } from "react";
-import { searchUsers, registerUser } from "../services/UserApi";
+import { searchUsers, updateUser, addRole } from "../services/UserApi";
 import CustomButton from "../components/CustomButton";
+import Notification from "../components/Notification";
 import { ExportExcelButton, ImportExcelButton } from "./UserImportExport";
-import NotificationListener from "../services/RealtimeApi";
+import UpdateUserModal from "./UserUpdateForm";
+import AddRoleModal from "./AddRoll";
 
 function UserAccountsPage() {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
-  const [showAddUserModal, setShowAddUserModal] = useState(false);
+  const [showUpdateModal, setShowUpdateModal] = useState(false);
+  const [showAddRoleModal, setShowAddRoleModal] = useState(false);
+  const [selectedUser, setSelectedUser] = useState(null);
+  const [notification, setNotification] = useState({ message: "", show: false });
 
   const getUsers = async () => {
     try {
@@ -21,14 +26,65 @@ function UserAccountsPage() {
     }
   };
 
-  // Sử dụng useEffect để lấy danh sách người dùng khi component mount
   useEffect(() => {
     getUsers();
   }, [searchTerm]);
 
-  // Hàm này sẽ được gọi khi có sự kiện cập nhật từ SignalR
+  useEffect(() => {
+    if (notification.show) {
+      const timer = setTimeout(() => {
+        setNotification({ ...notification, show: false });
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [notification]);
+
   const handleUsersUpdated = () => {
-    getUsers(); // Cập nhật lại danh sách người dùng
+    getUsers(); 
+  };
+
+  const handleShowUpdateModal = (user) => {
+    setSelectedUser(user);
+    setShowUpdateModal(true);
+  };
+
+  const handleCloseUpdateModal = () => {
+    setShowUpdateModal(false);
+    setSelectedUser(null);
+  };
+
+  const handleUpdateUser = async (updatedUser) => {
+    try {
+      await updateUser(updatedUser);
+      setUsers((prevUsers) => prevUsers.map((user) => (user.userId === updatedUser.userId ? updatedUser : user)));
+      setNotification({ message: "Cập nhật người dùng thành công", show: true });
+      setShowUpdateModal(false);
+    } catch (error) {
+      console.error("Error updating user:", error);
+      setNotification({ message: "Lỗi khi cập nhật người dùng", show: true });
+    }
+  };
+
+  const handleShowAddRoleModal = (user) => {
+    setSelectedUser(user);
+    setShowAddRoleModal(true);
+  };
+
+  const handleCloseAddRoleModal = () => {
+    setShowAddRoleModal(false);
+    setSelectedUser(null);
+  };
+
+  const handleAddRole = async (userId, roleId) => {
+    try {
+      await addRole(userId, roleId);
+      setNotification({ message: "Thêm vai trò thành công", show: true });
+      setShowAddRoleModal(false);
+      handleUsersUpdated();
+    } catch (error) {
+      console.error("Error adding role:", error);
+      setNotification({ message: "Lỗi khi thêm vai trò", show: true });
+    }
   };
 
   if (loading) {
@@ -49,7 +105,7 @@ function UserAccountsPage() {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
             <div className="d-flex align-items-center">
-              <ImportExcelButton onImportSuccess={handleUsersUpdated}/>
+              <ImportExcelButton onImportSuccess={() => { handleUsersUpdated(); setNotification({ message: 'Thêm người dùng thành công', show: true }); }} />
               <ExportExcelButton />
             </div>
           </div>
@@ -74,7 +130,7 @@ function UserAccountsPage() {
                     <td>{index + 1}</td>
                     <td className="text-center">{user.name}</td>
                     <td className="text-center">{user.gender}</td>
-                    <td className="text-center">{user.birthday}</td>
+                    <td className="text-center">{new Date(user.birthday).toLocaleDateString('en-GB')}</td>
                     <td className="text-center">{user.address}</td>
                     <td className="text-center">{user.phone}</td>
                     <td className="text-center">{user.mail}</td>
@@ -84,7 +140,8 @@ function UserAccountsPage() {
                         : "N/A"}
                     </td>
                     <td>
-                      <CustomButton label="Cập nhật" onClick={() => { /* handle update click */ }} />
+                      <CustomButton label="Cập nhật" onClick={() => handleShowUpdateModal(user)} />
+                      <CustomButton label="Thêm Roll" onClick={() => handleShowAddRoleModal(user)} />
                     </td>
                   </tr>
                 ))}
@@ -93,8 +150,22 @@ function UserAccountsPage() {
           </div>
         </div>
       </div>
-      
-      <NotificationListener onUsersUpdated={handleUsersUpdated} />          
+        
+      <UpdateUserModal 
+        show={showUpdateModal} 
+        user={selectedUser} 
+        handleClose={handleCloseUpdateModal} 
+        handleUpdate={handleUpdateUser} 
+      /> 
+
+      <AddRoleModal 
+        show={showAddRoleModal} 
+        user={selectedUser} 
+        handleClose={handleCloseAddRoleModal} 
+        handleAddRole={handleAddRole} 
+      />
+
+      <Notification message={notification.message} show={notification.show} />      
     </div>
   );
 }

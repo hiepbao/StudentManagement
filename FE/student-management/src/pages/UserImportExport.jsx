@@ -24,7 +24,6 @@ const ImportExcelButton = ({ onImportSuccess }) => {
   const onDrop = useCallback((acceptedFiles) => {
     importExcel(acceptedFiles[0])
       .then((response) => {
-        // Gọi hàm callback onImportSuccess để cập nhật danh sách người dùng
         if (onImportSuccess) {
           onImportSuccess();
         }

@@ -36,7 +36,7 @@ namespace StudentManagement.Controllers
             return users;
         }
 
-        [HttpGet("/export-excel")]
+        [HttpGet("export-excel")]
         public async Task<IActionResult> ExportToExcel()
         {
             var users = await _context.Users
@@ -212,7 +212,7 @@ namespace StudentManagement.Controllers
             return Ok(new { message = "Đăng ký thành công." });
         }
 
-        [HttpPost("/import-excel")]
+        [HttpPost("import-excel")]
         public async Task<IActionResult> ImportFromExcel(IFormFile file)
         {
             if (file == null || file.Length == 0)

@@ -6,36 +6,39 @@ import image from '../assets/images/image.png';
 import { loginApi } from '../services/Auth';
 import { saveAuthToken } from '../services/tokenService';
 import './Login.css';
-import Notification from '../components/Notification';
 
 function Login() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [password, setPassword] = useState('');
-  const [notificationMessage, setNotificationMessage] = useState('');
-  const [showNotification, setShowNotification] = useState(false);
   const navigate = useNavigate(); // Sử dụng useNavigate để chuyển hướng
 
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const response = await loginApi(phoneNumber, password);
-      if (response.data && response.data.token) {
-        const { token } = response.data;
-        saveAuthToken(token.result);
-        
-        try {
-          let decodedToken;
-          decodedToken = JSON.parse(atob(token.result.split('.')[1].replace(/-/g, '+').replace(/_/g, '/')));
-          console.log('Decoded Token:', decodedToken);
-        } catch (e) {
-          console.error('Failed to decode token:', e);
+        const response = await loginApi(phoneNumber, password);
+        if (response.data && response.data.token) {
+            const { token } = response.data;
+            saveAuthToken(token.result);
+
+            // Giải mã token và lưu tên người dùng
+            const base64Url = token.result.split('.')[1];
+            const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+            const jsonPayload = decodeURIComponent(
+                atob(base64)
+                    .split('')
+                    .map(function (c) {
+                        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+                    })
+                    .join('')
+            );
+            const decodedToken = JSON.parse(jsonPayload);
+            localStorage.setItem('Name', decodedToken.Name);
+            console.log('Decoded Token:', decodedToken); // Kiểm tra kết quả giải mã
+            navigate('/school'); // Chuyển hướng đến trang sau khi đăng nhập thành công
         }
-        
-        navigate('/school'); // Chuyển hướng đến trang /school sau khi đăng nhập thành công
-      }
     } catch (error) {
-      console.error('Login error:', error);
-      alert('Đăng nhập thất bại');
+        console.error("Login error:", error);
+        alert('Đăng nhập thất bại');
     }
   };
 
@@ -96,7 +99,6 @@ function Login() {
           </div>
         </div>
       </div>
-      <Notification message={notificationMessage} show={showNotification} />
     </div>
   );
 }

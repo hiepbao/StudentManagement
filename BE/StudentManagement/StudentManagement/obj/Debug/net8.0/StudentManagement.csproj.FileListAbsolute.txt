@@ -772,3 +772,12 @@ D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\ne
 D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\SixLabors.Fonts.dll
 D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\System.IO.Packaging.dll
 D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
+D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\ClosedXML.dll
+D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\ClosedXML.Parser.dll
+D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\ExcelNumberFormat.dll
+D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\RBush.dll
+D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\SixLabors.Fonts.dll
+D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\System.IO.Packaging.dll
+D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll

@@ -6,6 +6,7 @@ import image from '../assets/images/logo.png';
 // import '../styles/Header.css';
 
 function Header() {
+  const userName = localStorage.getItem('Name'); 
   return (
     <header className="d-flex align-items-center p-2 bg-primary text-white">
       <div className="d-flex align-items-center me-auto">
@@ -16,7 +17,7 @@ function Header() {
       <div className="d-flex align-items-center">
         <span className="me-3">Quản lý giáo dục </span>
         <FontAwesomeIcon icon={faUser} className="me-3" />
-        <a href="#" className="text-white text-decoration-none me-3">Họ và tên</a>
+        <a href="#" className="text-white text-decoration-none me-3">{userName || 'Họ và tên'}</a>
         <a href="#" className="text-white text-decoration-none me-3">Học kỳ | 2024-2025</a>
         <FontAwesomeIcon icon={faBell} className="me-3" />
         <FontAwesomeIcon icon={faQuestionCircle} className="me-3" />

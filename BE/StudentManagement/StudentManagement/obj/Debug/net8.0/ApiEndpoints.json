@@ -1124,6 +1124,27 @@
   },
   {
     "ContainingType": "StudentManagement.Controllers.UsersController",
+    "Method": "Addrole",
+    "RelativePath": "api/Users/addRole",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "roleId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentManagement.Controllers.UsersController",
     "Method": "DeleteUser",
     "RelativePath": "api/Users/Delete/{id}",
     "HttpMethod": "DELETE",
@@ -1182,6 +1203,16 @@
   },
   {
     "ContainingType": "StudentManagement.Controllers.UsersController",
+    "Method": "ExportToExcel",
+    "RelativePath": "api/Users/export-excel",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "StudentManagement.Controllers.UsersController",
     "Method": "GetUsers",
     "RelativePath": "api/Users/Get",
     "HttpMethod": "GET",
@@ -1199,6 +1230,22 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "StudentManagement.Controllers.UsersController",
+    "Method": "ImportFromExcel",
+    "RelativePath": "api/Users/import-excel",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
   },
   {
     "ContainingType": "StudentManagement.Controllers.UsersController",
