@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { searchUsers, registerUser } from "../services/UserApi";
 import CustomButton from "../components/CustomButton";
-import AddUserForm from "./AddUserForm";
-import { toast } from "react-toastify";
+import { ExportExcelButton, ImportExcelButton } from "./UserImportExport";
+import NotificationListener from "../services/RealtimeApi";
 
 function UserAccountsPage() {
   const [users, setUsers] = useState([]);
@@ -10,40 +10,25 @@ function UserAccountsPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [showAddUserModal, setShowAddUserModal] = useState(false);
 
-  useEffect(() => {
-    const getUsers = async () => {
-      try {
-        const response = await searchUsers(searchTerm);
-        setUsers(response.data);
-      } catch (error) {
-        console.error("Error fetching user accounts:", error);
-      } finally {
-        setLoading(false);
-      }
-    };
+  const getUsers = async () => {
+    try {
+      const response = await searchUsers(searchTerm);
+      setUsers(response.data);
+    } catch (error) {
+      console.error("Error fetching user accounts:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
+  // Sử dụng useEffect để lấy danh sách người dùng khi component mount
+  useEffect(() => {
     getUsers();
   }, [searchTerm]);
 
-  const handleAddUserClick = () => {
-    setShowAddUserModal(true);
-  };
-
-  const handleAddUserSubmit = async (newUser) => {
-    try {
-      const response = await registerUser(newUser);
-      toast.success(response.data.message);
-      setShowAddUserModal(false);
-      // Refresh user list after adding a new user
-      const userResponse = await searchUsers(searchTerm);
-      setUsers(userResponse.data);
-    } catch (error) {
-      if (error.response && error.response.data && error.response.data.message) {
-        toast.error(error.response.data.message);
-      } else {
-        toast.error("Error adding new user");
-      }
-    }
+  // Hàm này sẽ được gọi khi có sự kiện cập nhật từ SignalR
+  const handleUsersUpdated = () => {
+    getUsers(); // Cập nhật lại danh sách người dùng
   };
 
   if (loading) {
@@ -63,10 +48,9 @@ function UserAccountsPage() {
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <div>
-              <CustomButton label="Thêm" onClick={handleAddUserClick} />
-              <CustomButton label="Nhập từ excel" onClick={() => { /* handle import click */ }} />
-              <CustomButton label="Xuất excel" onClick={() => { /* handle export click */ }} />
+            <div className="d-flex align-items-center">
+              <ImportExcelButton onImportSuccess={handleUsersUpdated}/>
+              <ExportExcelButton />
             </div>
           </div>
           <div className="form-horizontal" style={{ backgroundColor: "white", padding: "30px", borderRadius: "1rem" }}>
@@ -110,8 +94,7 @@ function UserAccountsPage() {
         </div>
       </div>
       
-      {/* Add User Modal */}
-      <AddUserForm show={showAddUserModal} handleClose={() => setShowAddUserModal(false)} handleSubmit={handleAddUserSubmit} />
+      <NotificationListener onUsersUpdated={handleUsersUpdated} />          
     </div>
   );
 }

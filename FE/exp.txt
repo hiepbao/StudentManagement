@@ -10,6 +10,7 @@ npm install @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons @f
 npm install axios
 npm install react-bootstrap bootstrap 
 npm install react-toastify  
+npm install file-saver
 
 
 Giải thích chi tiết từng thư mục

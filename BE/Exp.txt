@@ -4,6 +4,10 @@ EntityFrameworkCore.design
 EntityFrameworkCore.SqlServer
 EntityFrameworkCore.Tools
 
++lib
+using ClosedXML.Excel;
+SignalR
+
 + Connection
 	- file json
 "ConnectionStrings": {

@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
-import Login from './pages/Login/Login';
+import Login from './pages/Login';
 import School from './pages/School';
 import Studypoint from './pages/Studypoint';
 import User from './pages/User';

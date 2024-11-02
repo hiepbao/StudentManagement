@@ -763,3 +763,12 @@ D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\ob
 D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\obj\Debug\net8.0\StudentManagement.pdb
 D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\obj\Debug\net8.0\StudentManagement.genruntimeconfig.cache
 D:\lamviec\QLHocSinh\StudentManagement\BE\StudentManagement\StudentManagement\obj\Debug\net8.0\ref\StudentManagement.dll
+D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\ClosedXML.dll
+D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\ClosedXML.Parser.dll
+D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\DocumentFormat.OpenXml.dll
+D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\DocumentFormat.OpenXml.Framework.dll
+D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\ExcelNumberFormat.dll
+D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\RBush.dll
+D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\SixLabors.Fonts.dll
+D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\System.IO.Packaging.dll
+D:\XinViec\StudentManagement\BE\StudentManagement\StudentManagement\bin\Debug\net8.0\System.Net.WebSockets.WebSocketProtocol.dll
